@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { userAuthStore } from "../store/useAuthStore";
+import { useAuthStore } from "../store/useAuthStore";
 import {
   Eye,
   EyeOff,
@@ -22,7 +22,7 @@ export const SignUpPage = () => {
     password: "",
   });
 
-  const { signup, isSigninUp } = userAuthStore();
+  const { signup, isSigninUp } = useAuthStore();
 
   const validateForm = () => {
     if (!formData.fullName.trim()) return toast.error("Ful name is required");
