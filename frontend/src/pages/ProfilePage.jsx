@@ -6,7 +6,6 @@ export const ProfilePage = () => {
   const { authUser, isUpdatingProfile, updateProfile } = useAuthStore();
   const [selectedImg, setSelectedImg] = useState(null);
   const handleImageUpload = async (e) => {
-    console.log("Workinggggggggggggggggggggggggggggggggggggggggggggg");
     const file = e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
@@ -16,7 +15,6 @@ export const ProfilePage = () => {
     reader.onload = async () => {
       const base64Image = reader.result;
 
-      console.log(base64Image);
 
       setSelectedImg(base64Image);
       await updateProfile({ profilePic: base64Image });

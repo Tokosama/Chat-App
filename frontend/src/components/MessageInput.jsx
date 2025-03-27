@@ -39,7 +39,6 @@ export const MessageInput = () => {
           text: text.trim(),
           image: imagePreview,
         });
-        console.log( "Showen")
         // Clear form
         setText("");
         setImagePreview(null);
